@@ -1,14 +1,18 @@
 :root {
-    --primaryColor: #252525;
+    --primaryColor: #8b7c7c;
     --whiteColor: #fff;
 }
 
 * {
     font-family: 'Oxygen', sans-serif;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100.1vh;
+    background-color: #000;
+  }
 
 a {
 text-decoration: none;
@@ -18,26 +22,12 @@ a:visited {
     color: inherit; 
 }
 
-.navbar {
-    position: fixed;
-    left: 12vh;
-    right: 12vh;
-    top: 1vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    transition: top 0.3s;
-
-}
-
 #logo {
     color: var(--primaryColor);
-    font-size: 30px;
-    text-align: center;
+    font-size: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
 
