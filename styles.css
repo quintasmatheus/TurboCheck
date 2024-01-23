@@ -11,6 +11,21 @@ body {
     background-color: #000;
   }
 
+  .navbar {
+    position: fixed;
+    left: 12vh;
+    right: 12vh;
+    top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13vh;
+    border-top: 1px solid rgb(255, 244, 244);
+    border-bottom: 1px solid rgb(255, 244, 244);
+    transition: top 0.3s;
+
+}
+
 a {
 text-decoration: none;
 }
