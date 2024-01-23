@@ -11,7 +11,7 @@ body {
     background-color: #000;
   }
 
-  .navbar {
+  #navbar {
     position: fixed;
     left: 12vh;
     right: 12vh;
@@ -23,7 +23,11 @@ body {
     border-top: 1px solid rgb(255, 244, 244);
     border-bottom: 1px solid rgb(255, 244, 244);
     transition: top 0.3s;
+}
 
+#navbar.transition {
+    border-bottom: 0px solid rgb(255, 244, 244);
+    transition: all 1s;
 }
 
 a {
@@ -36,12 +40,20 @@ a:visited {
 
 #logo {
     color: var(--primaryColor);
-    font-size: 50px;
+    font-size: 3rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+#logo.fixed {
+    position: fixed;
+    top: -7.5vh; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 .storyTime {
     display: grid;
