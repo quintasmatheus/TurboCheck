@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
         logo.classList.remove("fixed");
     }
 
-//To implement, this part here would sort of open the bottom border of the 
+//To implement, !!!
+//this part here would sort of open the bottom border of the 
 //navbar for the header to be placed and fixed there.
 
     /*   var thresholdTransition = 90;
@@ -43,8 +44,32 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         navbar.classList.remove("transition")
     }
- */
 
+    //TO IMPLEMENT!!!
+    making the sections invisble a little below the navbar
+ */
      
   });
+});
+
+////////////////////////////////////////////////////////////////
+
+//drawSVG
+// set height of the svg path as constant
+const svg = document.getElementById("svgPath");
+const length = svg.getTotalLength();
+
+// start positioning of svg drawing
+svg.style.strokeDasharray = length;
+
+// hide svg before scrolling starts
+svg.style.strokeDashoffset = length;
+
+window.addEventListener("scroll", function () {
+  const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+  const draw = length * scrollpercent ;
+
+  // Reverse the drawing when scroll upwards
+  svg.style.strokeDashoffset = length - draw;
 });
