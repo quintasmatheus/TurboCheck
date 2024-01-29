@@ -47,6 +47,7 @@ a {
 }
 
 .contact-button {
+    z-index: 1;
     position: fixed;
     top: 6.5vh;
     right: 15vh;
