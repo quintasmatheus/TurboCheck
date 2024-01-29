@@ -32,37 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         logo.classList.remove("fixed");
     }
-
-//To implement, !!!
-//this part here would sort of open the bottom border of the 
-//navbar for the header to be placed and fixed there.
-
-    /*   var thresholdTransition = 90;
-
-       if (scrollPosition > thresholdTransition) {
-        navbar.classList.add("transition")
-    } else {
-        navbar.classList.remove("transition")
-    }
-
-    //TO IMPLEMENT!!!
-    making the sections invisble a little below the navbar
- */
      
   });
 });
 
 ////////////////////////////////////////////////////////////////
 
-//drawSVG
-// set height of the svg path as constant
 const svg = document.getElementById("svgPath");
 const length = svg.getTotalLength();
 
-// start positioning of svg drawing
 svg.style.strokeDasharray = length;
 
-// hide svg before scrolling starts
 svg.style.strokeDashoffset = length;
 
 window.addEventListener("scroll", function () {
@@ -70,6 +50,20 @@ window.addEventListener("scroll", function () {
 
   const draw = length * scrollpercent ;
 
-  // Reverse the drawing when scroll upwards
   svg.style.strokeDashoffset = length - draw;
 });
+
+////////////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById('contactModal');
+  var contactButton = document.querySelector('.contact-button');
+  var closeBtn = document.querySelector('.close-btn');
+
+  function toggleModal() {
+      modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'block' : 'none';
+  }
+
+  contactButton.addEventListener('click', toggleModal);
+  closeBtn.addEventListener('click', toggleModal);
+});
+
