@@ -23,19 +23,29 @@ a {
         color: inherit; 
     }
 
-  #navbar {
-    position: fixed;
-    left: 12vh;
-    right: 12vh;
-    top: 3vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 13vh;
-    border-top: 1px solid rgb(255, 244, 244);
-    border-bottom: 1px solid rgb(255, 244, 244);
-    transition: top 0.3s;
-}
+    #navbar {
+        background-color: black;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 13vh;
+        transition: top 0.3s;
+    }
+
+    #navbar::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        height: 20px;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%,rgba(0,0,0,.5) 100%);
+        border-bottom: 1px solid  white;
+    }
 
 .drawTime {
     margin-top: 45vh;
@@ -72,70 +82,6 @@ a {
                 0 0 100px rgb(66, 26, 23);
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #611b1b;
-    padding: 20px;
-    box-shadow: 0 0 40px rgba(161, 159, 159, 0.3);
-    color: rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    z-index: 1;
-}
-
-.modal-content {
-    width: 30vh;
-    min-width: 20vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.modal-content label {
-    width: 100%; 
-    text-align: center;
-    margin: 5px 0; 
-}
-
-.modal-content input, .modal-content textarea {
-    width: 80%; 
-    padding: 8px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-.modal-content button {
-    width: 50%; 
-    padding: 10px;
-    margin-top: 10px; 
-    border: none;
-    background-color: #8b7c7c;
-    color: #fff;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.modal-content button:hover {
-    box-shadow: 0 0 5px rgb(199, 187, 186),
-    0 0 25px rgb(78, 77, 77),
-    0 0 50px rgb(253, 253, 253),
-    0 0 100px rgb(153, 123, 120);
-}
-
-.close-btn {
-    position: absolute;
-    top: 0px;
-    right: 10px;
-    font-size: 40px;
-    cursor: pointer;
-}
-
-
 #logo {
     color: var(--primaryColor);
     font-size: 3rem;
@@ -145,9 +91,9 @@ a {
     transform: translate(-50%, -50%);
 }
 
-#logo.fixed {
+#logo.fixed, .contact-page #logo {
     position: fixed;
-    top: -7.5vh; 
+    top: -2.5vh; 
     left: 50%;
     transform: translateX(-50%);
 }

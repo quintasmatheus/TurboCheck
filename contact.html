@@ -1,0 +1,48 @@
+<!--Header para todas as páginas-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TurboCheck | Contact</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body class="contact-page">
+
+    <nav class="initial" id ="navbar">
+    
+   </nav>
+
+     <div id ="logo">
+         <h1><a href="index.html">TurboCheck</h1>
+    </div>
+
+<!-- Fim do header para todos -->
+
+<section class="contact-form">
+    <h2>CONTACTA-NOS</h2>
+        <form id ="form" action="https://public.herotofu.com/v1/014c1fe0-bfc6-11ee-9594-4bf8c9d3c5a0" method="POST">
+            <label for="name">NOME COMPLETO:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="telemovel">TELEMÓVEL:</label>
+            <input type="tel" id="telemovel" name="telemovel"  pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
+            
+            <label for="email">EMAIL:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">ASSUNTO:</label>
+            <input type="text" id="assunto" name="assunto" required></input>
+            
+            <label for="message">MENSAGEM:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">ENVIAR</button>
+        </form>
+</section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
