@@ -16,32 +16,42 @@
    </nav>
 
      <div id ="logo">
-         <h1><a href="index.html">TurboCheck</h1>
+         <h1>TurboCheck</h1>
     </div>
 
-<!-- Fim do header para todos -->
-
-<section class="contact-form">
-    <h2>CONTACTA-NOS</h2>
-        <form id ="form" action="https://public.herotofu.com/v1/014c1fe0-bfc6-11ee-9594-4bf8c9d3c5a0" method="POST">
-            <label for="name">NOME COMPLETO:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="telemovel">TELEMÓVEL:</label>
-            <input type="tel" id="telemovel" name="telemovel"  pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
+<!-- Fim do header para todos --> 
+<h2  class="section-header">CONTACTA-NOS</h2>
+<div class="content-wrapper">
+ 
+        <form id ="contact-form" class="form-horizontal" action="https://public.herotofu.com/v1/014c1fe0-bfc6-11ee-9594-4bf8c9d3c5a0" method="POST">
+          <div class="form-group">
+             <input type="text" class="form-control" id="name" name="name" placeholder="NOME COMPLETO" required>
+          </div>
+           
+          <div class="form-group">
+            <input type="tel" class="form-control" id="telemovel" name="telemovel" placeholder="TELEMÓVEL" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
+          </div>
+          
+         <div class="form-group">
+          <input type="email" class="form-control" id="email" name="email"  placeholder="EMAIL" required>
+        </div>
+         
+        <div class="form-group">
+          <input type="text" class="form-control" id="assunto" name="assunto" placeholder="ASSUNTO" required>
+        </div>
+      
+        <textarea class="form-control" id="mensagem" name="mensagem" rows="10" placeholder="MENSAGEM" required>
+        </textarea>
             
-            <label for="email">EMAIL:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">ASSUNTO:</label>
-            <input type="text" id="assunto" name="assunto" required></input>
-            
-            <label for="message">MENSAGEM:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            
-            <button type="submit">ENVIAR</button>
+            <button class="btn btn-primary send-button"  id="submit" type="submit" value="ENVIAR">
+              <div class="alt-send-button">
+                <i class="fa fa-paper-plane"></i><span class="send-text">ENVIAR</span>
+              </div>
+            </button>
         </form>
 </section>
+</div>
+  
 
     <script src="script.js"></script>
   </body>

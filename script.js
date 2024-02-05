@@ -29,7 +29,7 @@ if ( drawTimeElement ){
     console.log("scrollPosition ->" ,scrollPosition)
     console.log("windowScrollY ->" ,window.scrollY)
 
-    const thresholdLogo = 380;
+    const thresholdLogo = 230;
      if (scrollPosition > thresholdLogo) {
       logo.classList.add("fixed");
     } else {
