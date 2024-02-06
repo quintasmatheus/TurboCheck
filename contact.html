@@ -1,0 +1,58 @@
+<!--Header para todas as páginas-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TurboCheck | Contact</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body class="contact-page">
+
+    <nav class="initial" id ="navbar">
+    
+   </nav>
+
+     <div id ="logo">
+         <h1>TurboCheck</h1>
+    </div>
+
+<!-- Fim do header para todos --> 
+<h2  class="section-header">CONTACTA-NOS</h2>
+<div class="content-wrapper">
+ 
+        <form id ="contact-form" class="form-horizontal" action="https://public.herotofu.com/v1/014c1fe0-bfc6-11ee-9594-4bf8c9d3c5a0" method="POST">
+          <div class="form-group">
+             <input type="text" class="form-control" id="name" name="name" placeholder="NOME COMPLETO" required>
+          </div>
+           
+          <div class="form-group">
+            <input type="tel" class="form-control" id="telemovel" name="telemovel" placeholder="TELEMÓVEL" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
+          </div>
+          
+         <div class="form-group">
+          <input type="email" class="form-control" id="email" name="email"  placeholder="EMAIL" required>
+        </div>
+         
+        <div class="form-group">
+          <input type="text" class="form-control" id="assunto" name="assunto" placeholder="ASSUNTO" required>
+        </div>
+      
+        <textarea class="form-control" id="mensagem" name="mensagem" rows="10" placeholder="MENSAGEM" required>
+        </textarea>
+            
+            <button class="btn btn-primary send-button"  id="submit" type="submit" value="ENVIAR">
+              <div class="alt-send-button">
+                <i class="fa fa-paper-plane"></i><span class="send-text">ENVIAR</span>
+              </div>
+            </button>
+        </form>
+</section>
+</div>
+  
+
+    <script src="script.js"></script>
+  </body>
+</html>
