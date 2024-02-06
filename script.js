@@ -15,29 +15,25 @@ hiddenElements.forEach((el) => observer.observe(el));
 ////////////////////////////////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function () {
-  const logo = document.getElementById("logo");
-  const navbar = document.getElementById("navbar");
-  const navbarHeight = navbar.offsetHeight;
-
-  const drawTimeElement = document.querySelector(".drawTime")
-
+  var logo = document.getElementById("logo");
+  var navbar = document.getElementById("navbar");
+  var navbarHeight = navbar.offsetHeight;
   console.log("navbarHeight ->" ,navbarHeight)
 
-if ( drawTimeElement ){
   window.addEventListener("scroll", function () {
-    const scrollPosition = window.scrollY;
-    console.log("scrollPosition ->" ,scrollPosition)
-    console.log("windowScrollY ->" ,window.scrollY)
+      // Get the current scroll position
+      var scrollPosition = window.scrollY;
+      console.log("scrollPosition ->" ,scrollPosition)
+      console.log("windowScrollY ->" ,window.scrollY)
 
-    const thresholdLogo = 230;
-     if (scrollPosition > thresholdLogo) {
-      logo.classList.add("fixed");
+      var thresholdLogo = 290;
+       if (scrollPosition > thresholdLogo) {
+        logo.classList.add("fixed");
     } else {
-      logo.classList.remove("fixed");
+        logo.classList.remove("fixed");
     }
-   
+     
   });
-}
 });
 
 ////////////////////////////////////////////////////////////////
@@ -57,3 +53,16 @@ window.addEventListener("scroll", function () {
   svg.style.strokeDashoffset = length - draw;
 });
 
+////////////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById('contactModal');
+  var contactButton = document.querySelector('.contact-button');
+  var closeBtn = document.querySelector('.close-btn');
+
+  function toggleModal() {
+      modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'block' : 'none';
+  }
+
+  contactButton.addEventListener('click', toggleModal);
+  closeBtn.addEventListener('click', toggleModal);
+});
