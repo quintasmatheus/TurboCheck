@@ -23,19 +23,40 @@ a {
         color: inherit; 
     }
 
-  #navbar {
-    position: fixed;
-    left: 12vh;
-    right: 12vh;
-    top: 3vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 13vh;
-    border-top: 1px solid rgb(255, 244, 244);
-    border-bottom: 1px solid rgb(255, 244, 244);
-    transition: top 0.3s;
-}
+
+    #navbar {
+        background-color: black;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 13vh;
+        transition: top 0.3s;
+    }
+
+    #navbar::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        height: 20px;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%,rgba(0,0,0,.5) 100%);
+        border-bottom: 1px solid  white;
+    }
+
+    #navbar::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: 20px;
+        border-top: 1px solid  white;
+    }
 
 .drawTime {
     margin-top: 45vh;
@@ -87,8 +108,8 @@ a {
 }
 
 .modal-content {
-    width: 30vh;
-    min-width: 20vh;
+    width: 20vw;
+    min-width: 15vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,8 +124,8 @@ a {
 
 .modal-content input, .modal-content textarea {
     width: 80%; 
-    padding: 8px;
-    margin: 5px 0;
+    padding: 8px 8px;
+    margin: 5px 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
