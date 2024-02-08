@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
   var logo = document.getElementById("logo");
   var navbar = document.getElementById("navbar");
   var navbarHeight = navbar.offsetHeight;
-  console.log("navbarHeight ->" ,navbarHeight)
+  //console.log("navbarHeight ->" ,navbarHeight)
 
   window.addEventListener("scroll", function () {
       // Get the current scroll position
       var scrollPosition = window.scrollY;
-      console.log("scrollPosition ->" ,scrollPosition)
-      console.log("windowScrollY ->" ,window.scrollY)
+      //.log("scrollPosition ->" ,scrollPosition)
+      //console.log("windowScrollY ->" ,window.scrollY)
 
       var thresholdLogo = 290;
        if (scrollPosition > thresholdLogo) {
