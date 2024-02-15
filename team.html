@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TurboCheck</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+
+    <nav class="initial" id ="navbar">
+      <button class="contact-button">
+        Contacta-nos
+    </button>
+   </nav>
+
+   <div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>CONTACTA-NOS</h2>
+        <form action="https://public.herotofu.com/v1/014c1fe0-bfc6-11ee-9594-4bf8c9d3c5a0" method="POST">
+          <label for="name">NOME COMPLETO:</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+      
+          <label for="telemovel">TELEMÓVEL:</label>
+          <input type="tel" id="telemovel" name="telemovel" autocomplete="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
+          
+          <label for="email">EMAIL:</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+      
+          <label for="assunto">ASSUNTO:</label>
+          <input type="text" id="assunto" name="assunto" autocomplete="off" required></input>
+          
+          <label for="message">MENSAGEM:</label>
+          <textarea id="message" name="message" autocomplete="off" rows="4" required></textarea>
+          
+          <button type="submit">ENVIAR</button>
+      </form>
+      
+    </div>
+</div>
+
+     <div id ="logo" class="fixed">
+         <h1><a href="index.html">TurboCheck</a></h1>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
