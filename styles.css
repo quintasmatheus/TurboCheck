@@ -286,7 +286,7 @@ box-shadow:
   rgba(139, 124, 124, 0.05) 25px 25px;
 }
 
-/* SERVICES PAGE*/
+/* OTHER PAGES*/
 
 .slider-wrapper {
     position: absolute;
@@ -294,6 +294,8 @@ box-shadow:
     left: 50%;
     top: 50%;
     transform: translate(-120%, -50%);
+    box-shadow: rgba(128, 128, 128, 0.25) 0px 54px 55px, rgba(138, 137, 137, 0.12) 0px -12px 30px, rgba(132, 131, 131, 0.12) 0px 4px 6px, rgba(194, 194, 194, 0.17) 0px 12px 13px, rgba(216, 216, 216, 0.09) 0px -3px 5px;
+
 }
 
 .slider{
@@ -350,7 +352,7 @@ box-shadow:
     opacity: 1;
 }
 
-.information{
+.information {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -364,6 +366,24 @@ box-shadow:
     top: 50%;
     transform: translate(10%, -50%);
     background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(128, 128, 128, 0.25) 0px 54px 55px, rgba(138, 137, 137, 0.12) 0px -12px 30px, rgba(132, 131, 131, 0.12) 0px 4px 6px, rgba(194, 194, 194, 0.17) 0px 12px 13px, rgba(216, 216, 216, 0.09) 0px -3px 5px;
+}
+
+#title {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primaryColor);
+}
+
+#info-text {
+    position: relative;
+    font-size: 1.5rem;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: repeating-radial-gradient(circle at 20px 30px, #302b2b, #ee4b2b, #655f76);
 }
 
 
