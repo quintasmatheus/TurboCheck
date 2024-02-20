@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
       //.log("scrollPosition ->" ,scrollPosition)
       //console.log("windowScrollY ->" ,window.scrollY)
 
-      var thresholdLogo = 290;
-       if (scrollPosition > thresholdLogo) {
+      var thresholdLogoWindows = 290;
+       if (scrollPosition > thresholdLogoWindows) {
         logo.classList.add("fixed");
     } else {
         logo.classList.remove("fixed");
