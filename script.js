@@ -17,24 +17,23 @@ hiddenElements.forEach((el) => observer.observe(el));
 document.addEventListener("DOMContentLoaded", function () {
   var logo = document.getElementById("logo");
   var navbar = document.getElementById("navbar");
-  var navbarHeight = navbar.offsetHeight;
-  //console.log("navbarHeight ->" ,navbarHeight)
+
+  // Calculate the threshold based on viewport height
+  var thresholdLogoViewport = window.innerHeight * 0.4;
 
   window.addEventListener("scroll", function () {
-      // Get the current scroll position
-      var scrollPosition = window.scrollY;
-      //.log("scrollPosition ->" ,scrollPosition)
-      //console.log("windowScrollY ->" ,window.scrollY)
+    // Get the current scroll position
+    var scrollPosition = window.scrollY;
 
-      var thresholdLogoWindows = 290;
-       if (scrollPosition > thresholdLogoWindows) {
-        logo.classList.add("fixed");
+    // Check if the scroll position is beyond the calculated threshold
+    if (scrollPosition > thresholdLogoViewport) {
+      logo.classList.add("fixed");
     } else {
-        logo.classList.remove("fixed");
+      logo.classList.remove("fixed");
     }
-     
   });
 });
+
 
 ////////////////////////////////////////////////////////////////
 
